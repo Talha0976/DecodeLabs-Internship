@@ -1,21 +1,21 @@
 def display_menu():
-    print("\n My TO-DO LIST ")
-    print("1. Add Task")
-    print("2. View Tasks")
-    print("3. Exit")
+    print("\n📝 My TO-DO LIST 📝")
+    print("1️⃣  Add Task")
+    print("2️⃣  View Tasks")
+    print("3️⃣  Exit")
 
 def add_task(task_list):
     task = input("Enter the task: ")
     task_list.append(task)
-    print(f'"{task}" added successfully!')
+    print(f'✅ "{task}" added successfully!')
 
 def view_tasks(task_list):
     if not task_list:
-        print("No tasks yet. Add one!")
+        print("📭 No tasks yet. Add one!")
         return
-    print("\nYour Tasks:")
+    print("\n📋 Your Tasks:")
     for index, task in enumerate(task_list, start=1):
-        print(f"{index}. {task}")
+        print(f"🔹 {index}. {task}")
 
 def main():
     my_tasks = []
@@ -29,10 +29,10 @@ def main():
         elif choice == "2":
             view_tasks(my_tasks)
         elif choice == "3":
-            print("Goodbye!")
+            print("👋 Goodbye!")
             break
         else:
-            print("Invalid choice, try again.")
+            print("⚠️ Invalid choice, try again.")
 
 if __name__ == "__main__":
     main()
